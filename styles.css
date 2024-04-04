@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+:root {
+  --background-color: #120413;
+  --background-color-op: #1204130a;
+  --desc-text-color: #120413;
+  --text-color: #ebe1e9;
+  --accent-color: #7214ca;
+  --drop-shadow: #1204135b;
+  --heading: 2rem;
+  --sub-heading: 1.3em;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+* {
+  margin: 0 auto;
+  font-family: 'Prompt', sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  font-family: 'Prompt', sans-serif;
+}
+
+#navbar {
+  width: 70vw;
+  position: fixed;
+  padding-block: 40px;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  background-color: var(--background-color-op);
+  backdrop-filter: blur(.9rem);
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  padding-inline-start: 55px;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav-menu a:hover {
+  color: var(--accent-color);
+}
+
+.logo a {
+  /* update with logo img */
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.hamburger_menu {
+  display: none;
+}
+
+.container {
+  max-width: 70vw;
+}
+
+#welcome-section {
+  background: var(--background-color);
+  background: linear-gradient(5deg, rgba(2, 0, 36, 0.10127801120448177) 2%, rgb(53, 4, 85) 44%, rgba(22, 0, 45, 0.10407913165266103) 100%);
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  max-width: 70vw;
+}
+
+.welcome h1 {
+  line-height: 1em;
+  font-size: 9rem;
+}
+
+.welcome span {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.top {
+  font-weight: 100;
+  font-size: 1.7rem;
+}
+
+.bottom {
+  font-weight: 400;
+  font-size: 3.2rem;
+}
+
+.mobile-nav {
+  z-index: 999;
+  background-color: #7214ca;
+}
+
+@media screen and (max-width: 900px) {
+
+  .mobile-nav[aria-expanded="true"] {
+    left: 0px;
+    right: 0px;
+    margin: 0;
+    border-radius: 15px;
+    top: 150px;
+    width: 60vw;
+    height: 35vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 999;
+    background: linear-gradient(25deg, #020024 10%, #350455 50%, #16002d 85%);
+    backdrop-filter: blur(.8rem);
+    padding: 50px;
+  }
+
+  .mobile-nav h1 {
+    margin: 0;
+  }
+
+  .mobile-nav a {
+    margin: 0;
+    padding-block-start: 15px;
+    font-size: 28px;
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-nav li {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #navbar .mobile-nav .nav-text {
+    position: absolute;
+    top: 65px;
+  }
+
+  .hamburger_menu_exit {
+    display: block;
+    position: absolute;
+    width: 35px;
+    right: 35px;
+    top: 35px;
+    z-index: 999;
+  }
+
+  .hamburger_menu_exit button {
+    padding: 0;
+  }
+
+  .hamburger_menu_exit>button,
+  .hamburger_menu_exit>button::before,
+  .hamburger_menu_exit>button::after {
+    margin: 0;
+    border: none;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--text-color);
+  }
+
+  .hamburger_menu_exit>button::before {
+    content: '';
+    top: -12px;
+  }
+
+  .hamburger_menu_exit>button::after {
+    content: '';
+    top: 12px;
+  }
+
+  .hamburger_menu_exit>button {
+    background: var(--text-color);
+    transform: rotate(45deg);
+  }
+
+  .hamburger_menu_exit>button::after {
+    background: var(--text-color);
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  .hamburger_menu_exit>button::before {
+    background: var(--text-color);
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  #navbar {
+    justify-content: center;
+    position: fixed;
+    width: 75vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color-op);
+    backdrop-filter: blur(.9rem);
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .hamburger_menu {
+    display: block;
+    position: absolute;
+    width: 35px;
+    right: 1px;
+    z-index: 999;
+  }
+
+  .hamburger_menu button {
+    padding: 0;
+  }
+
+  .hamburger_menu>button,
+  .hamburger_menu>button::before,
+  .hamburger_menu>button::after {
+    margin: 0;
+    border: none;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--text-color);
+  }
+
+  .hamburger_menu>button::before {
+    content: '';
+    top: -12px;
+  }
+
+  .hamburger_menu>button::after {
+    content: '';
+    top: 12px;
+  }
+
+  .bottom br {
+    display: none;
+  }
+
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+  }
+
+  .welcome h1 {
+    font-size: 4rem;
+    padding-block: 25px;
+    line-height: 1em;
+
+  }
+
+  .welcome span {
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  .top {
+    font-weight: 100;
+    font-size: 1.3rem;
+  }
+
+  .bottom {
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+
+  .project-text .heading-text {
+    font-weight: 400;
+    font-size: var(--heading);
+    margin: 0;
+    line-height: 1.3em;
+  }
+
+  .container .project-text {
+    margin-block: 5rem;
+  }
+
+  .project-text .sub-text {
+    font-size: var(--sub-heading);
+  }
+
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .project-grid .project-left {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+  }
+
+  .project-grid .project-tile {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 1;
+    grid-column-end: 3;
+  }
+
+  .project-grid .project-right {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+  }
+
+  .project-grid .project-tile-4 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 1;
+    grid-column-end: 3;
+  }
+
+  .container .about-grid {
+    margin-block-start: 10rem;
+    margin-block-end: 5rem;
+    gap: 55px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-grid .about-text p {
+    font-size: var(--sub-heading);
+    text-align: center;
+    max-width: 100vw;
+  }
+
+  .about-grid .about-text h2 {
+    font-size: var(--heading);
+    text-align: center;
+    max-width: 100vw;
+  }
+
+  .cards .contact-card {
+    padding: 25px;
+    margin-bottom: 15px;
+  }
+
+  .cards .contact-card button {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .contact-card .contact-text {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  .contact-card .contact-subtext {
+    padding-bottom: 15px;
+  }
+
+  .about-grid .cards .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cards .follow-card {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .cards .icon {
+    height: 30px;
+  }
+
+  .follow-text {
+    font-size: .8em;
+  }
+
+}
+
+.project-left {
+  display: grid;
+  grid-template-columns: 1fr .5fr .5fr;
+  grid-template-rows: auto;
+  align-items: start;
+  gap: 55px;
+}
+
+.project-right {
+  display: grid;
+  grid-template-columns: .5fr .5fr 1fr;
+  grid-template-rows: auto;
+  align-items: start;
+  gap: 55px;
+}
+
+.project-grid {
+  display: grid;
+  gap: 55px;
+  margin-block: 55px;
+  justify-content: space-around;
+}
+
+.project-img {
+  border-radius: 15px;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.project-desc {
+  padding-top: 10px;
+  margin-inline: 10px;
+}
+
+.project-desc h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.project-desc p {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.project-text {
+  text-align: right;
+  margin-block: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.heading-text {
+  font-weight: 400;
+  font-size: 3.2rem;
+  margin: 0;
+  line-height: 1.3em;
+}
+
+.sub-text {
+  font-weight: 200;
+  font-size: 1.7rem;
+  margin: 0;
+  line-height: 1.3em;
+  padding-top: 10px;
+}
+
+.heading-text span {
+  color: var(--accent-color);
+}
+
+.about-text p {
+  max-width: 40vw;
+}
+
+.about-grid {
+  margin-block-start: 10rem;
+  margin-block-end: 5rem;
+  gap: 55px;
+  display: grid;
+  grid-template-columns: 1fr .92fr;
+}
+
+.contact-text {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1.3em;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.contact-subtext {
+  font-weight: 400;
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.contact-text span {
+  color: var(--accent-color);
+}
+
+.contact-card button {
+  font-weight: 400;
+  letter-spacing: .1em;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-around;
+  border-style: none;
+  width: 15vw;
+  padding-block: 20px;
+  border-radius: 15px;
+  color: var(--text-color);
+  background-color: var(--accent-color);
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+  color: var(--desc-text-color);
+  border-radius: 15px;
+  background-color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icons {
+  display: flex;
+  margin: 0;
+}
+
+.icons svg {
+  padding-inline: 5px;
+}
+
+.follow-card {
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  border: var(--text-color) solid 2px;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 0;
+  gap: 25px;
+}
+
+.follow-text {
+  margin: 0;
+}
+
+.cards {
+  width: 100%;
+}
+
+.icons a {
+  display: flex;
+  margin: 0;
+}
+
+.contact-card button {
+  width: 80%;
+}
